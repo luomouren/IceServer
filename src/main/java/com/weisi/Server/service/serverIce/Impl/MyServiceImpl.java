@@ -11,5 +11,4 @@ public class MyServiceImpl extends _MyServiceDisp{
 		String result="*******ICE服务端向客户端发送字符串***********";
 		return result;
 	}
-
 }
