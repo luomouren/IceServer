@@ -47,6 +47,14 @@
 						replica-group="MyService2Rep">
 					</adapter>
 				</service>
+				
+				<service name="SwitchService" entry="com.weisi.Server.frame.ice.GenIceSwitcherBoxService">
+					<property name="servantClassName" value="com.weisi.Server.service.switcher.impl.SwitchI"/>
+					<adapter name="SwitchService" id="SwitchService${id}" endpoints="default"
+						replica-group="SwitchServiceRep">
+					</adapter>
+				</service>
+				
 			</icebox>
 		</server-template>
 		<replica-group id="MyServiceRep">
@@ -58,6 +66,10 @@
 			<load-balancing type="round-robin" n-replicas="0" />
 			<object identity="MyService2" type="::gridServer::MyService" />
 		</replica-group>
+		<replica-group id="SwitchServiceRep">
+			<load-balancing type="round-robin" n-replicas="0" />
+			<object identity="SwitchService" type="::switcher::ISwitchCallback" />
+		</replica-group><!-- module:interface -->
 		
 		<!-- 每个node定义2个icebox -->
 		<node name="node1">

@@ -1,6 +1,7 @@
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8
 encoding//src/main/java/com/weisi/Server/frame/ice/GenIceBoxService.java=UTF-8
+encoding//src/main/java/com/weisi/Server/frame/ice/GenIceSwitcherBoxService.java=UTF-8
 encoding//src/main/java/com/weisi/Server/frame/ice/PerfDispatchInterceptor.java=UTF-8
 encoding//src/main/resources=UTF-8
 encoding//src/main/resources/ice/icebox.properties=UTF-8
