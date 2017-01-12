@@ -1,0 +1,74 @@
+<icegrid>
+	<application name="MyApp">
+		<properties id="MultiThreaded">
+		<property name="Ice.PrintStackTraces" value="1" />
+	      	<property name="IceSSL.Trace.Security" value="2" />
+	      	<property name="Ice.ThreadPool.Client.Size" value="2" />
+	      	<property name="Ice.ThreadPool.Client.SizeMax" value="50" />
+	      	<property name="Ice.ThreadPool.Server.Size" value="10" />
+	      	<property name="Ice.ThreadPool.Server.SizeMax" value="100" />
+	      	<property name="IceBox.InheritProperties" value="1" />
+	      	<property name="Ice.Override.ConnectTimeout" value="5000" />
+	      	<property name="Ice.Override.Timeout" value="10000" />
+	      	<property name="IceBox.Trace.ServiceObserver" value="1" />
+	      	<property name="Ice.Default.LocatorCacheTimeout" value="300" />
+	      	<property name="Ice.BackgroundLocatorCacheUpdates" value="1" /> 
+		</properties>
+		
+		<properties id="props">
+           	<property name="Ice.StdErr" value="G:\07ice\data\ice\ice_stderr.log"/>
+            <property name="Ice.StdOut" value="G:\07ice\data\ice\ice_stdout.log"/>
+        </properties>
+        
+		<server-template id="MyServerTemplate">
+			<parameter name="id" />
+			<!-- exe指定java启动 -->
+			<icebox id="MyServer${id}" exe="java" activation="on-demand">
+				<properties>
+					<properties refid="MultiThreaded" />
+					<properties refid="props" />
+				</properties>
+				<option>-Xmx512M</option>
+				<!-- iceBox启动main方法 -->
+				<option>IceBox.Server</option>
+				<!-- 开发的代码路径 -->
+				<!-- 检查<env></env>标签配置是否错误,env标签不能有换行,最后一个env的变量不能使用;结尾,如果还是不行将classpatch加入到系统环境变量或是每个依赖的jar都写到env标签中。  -->
+				<env>CLASSPATH=G:\01Install\ZeroC\Ice-3.6.1\lib\*;G:\00workspace\00workspace\01JCXT\IceServer\target\Server\WEB-INF\classes;G:\00workspace\00workspace\01JCXT\IceServer\target\Server\WEB-INF\lib\*</env>
+				<!-- entry指定iceBox启动的service，replica-group指定endpoints组 -->
+				<service name="MyService" entry="com.weisi.Server.frame.ice.GenIceBoxService">
+					<property name="servantClassName" value="com.weisi.Server.service.serverIce.Impl.MyServiceImpl"/>
+					<adapter name="MyService" id="MyService${id}" endpoints="default"
+						replica-group="MyServiceRep">
+					</adapter>
+				</service>
+				<service name="MyService2" entry="com.weisi.Server.frame.ice.GenIceBoxService">
+					<property name="servantClassName" value="com.weisi.Server.service.iceGrid.impl.MyServiceImpl2"/>
+					<adapter name="MyService2" id="MyService2${id}" endpoints="default"
+						replica-group="MyService2Rep">
+					</adapter>
+				</service>
+			</icebox>
+		</server-template>
+		<replica-group id="MyServiceRep">
+			<load-balancing type="round-robin" n-replicas="0" />
+			<!-- 指定servant的名字 -->
+			<object identity="MyService" type="::serverIce::MyService" />
+		</replica-group>
+		<replica-group id="MyService2Rep">
+			<load-balancing type="round-robin" n-replicas="0" />
+			<object identity="MyService2" type="::gridServer::MyService" />
+		</replica-group>
+		
+		<!-- 每个node定义2个icebox -->
+		<node name="node1">
+			<server-instance template="MyServerTemplate" id="Node1_1" />
+			<server-instance template="MyServerTemplate" id="Node1_2" />
+		</node>
+		<node name="node2">
+			<server-instance template="MyServerTemplate" id="Node2_1" />
+			<server-instance template="MyServerTemplate" id="Node2_2" />
+		</node>
+	</application>
+</icegrid>
+
+
