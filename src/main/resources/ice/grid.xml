@@ -1,5 +1,5 @@
 <icegrid>
-	<application name="MyApp">
+	<application name="gyApp">
 		<properties id="MultiThreaded">
 		<property name="Ice.PrintStackTraces" value="1" />
 	      	<property name="IceSSL.Trace.Security" value="2" />
