@@ -1,8 +1,5 @@
 package com.weisi.Server.frame.ice;
 
-/**
- * by song lin & wu zhihui
- */
 import java.util.Arrays;
 
 import org.slf4j.LoggerFactory;
@@ -52,7 +49,6 @@ public class GenIceBoxService implements Service {
 
 		_adapter.activate();
 		logger.info(name + " service started ,with param size " + args.length + " detail:" + Arrays.toString(args));
-
 	}
 
 	@Override
@@ -61,7 +57,6 @@ public class GenIceBoxService implements Service {
 		_adapter.destroy();
 		PerfDispatchInterceptor.removeICEObject(id);
 		logger.info("stopped service " + id + " stoped");
-
 	}
 
 }
