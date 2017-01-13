@@ -1,5 +1,6 @@
 package com.weisi.Server.frame.ice;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 
 import org.apache.log4j.Logger;
@@ -22,8 +23,6 @@ public class GenIceSwitcherBoxService implements Service {
 
 	@Override
 	public void start(String name, Communicator communicator, String[] args) {
-		TimerSendSms();
-		
 		String servantClassName = communicator.getProperties().getProperty("servantClassName");
 		LOGGER.info("load servant class "+servantClassName);
 		Ice.Util.setProcessLogger(iceLogger);
@@ -37,10 +36,22 @@ public class GenIceSwitcherBoxService implements Service {
 			return;
 		}
 
-		Ice.Object object = null;
+		Ice.Object test = null;
 		if (null != servantClass) {
 			try {
-				object = (Object) servantClass.newInstance();
+				try {
+					// 添加属性Ice.Properties p
+					//创建servant
+					Ice.Properties p = communicator.getProperties();
+					try {
+						test=(Object) servantClass.getConstructor(Ice.Properties.class).newInstance(p);
+					} catch (IllegalArgumentException | InvocationTargetException e) {
+						e.printStackTrace();
+					}
+				} catch (NoSuchMethodException | SecurityException e) {
+					e.printStackTrace();
+				}
+				
 			} catch (InstantiationException e) {
 				logger.error(e.getMessage(), e);
 			} catch (IllegalAccessException e) {
@@ -48,8 +59,8 @@ public class GenIceSwitcherBoxService implements Service {
 			}
 		}
 
-		if (null != object) {
-			_adapter.add(PerfDispatchInterceptor.addICEObject(id, object), id);
+		if (null != test) {
+			_adapter.add(PerfDispatchInterceptor.addICEObject(id, test), id);
 		}
 
 		_adapter.activate();
@@ -57,26 +68,6 @@ public class GenIceSwitcherBoxService implements Service {
 		communicator.waitForShutdown();
 	}
 
-	
-	public void TimerSendSms(){
-		// 服务端发送数据给客户端 SwitchClient.java要运行
-		new Thread(new Runnable() {
-			@Override
-			public void run() {
-				LOGGER.info("服务端向客户端发送数据---send thread start.");
-				try {
-					Thread.sleep(20000);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-				// 和服务端心跳的标识
-				String sn = "0481deb6494848488048578316516694";
-				String msg = "test msg.";
-				LOGGER.info("result = " + SwitchUtil.sendMsg(sn, msg));
-			}
-		}).start();
-	}
-	
 	@Override
 	public void stop() {
 		logger.info("stopping service " + id + " ....");

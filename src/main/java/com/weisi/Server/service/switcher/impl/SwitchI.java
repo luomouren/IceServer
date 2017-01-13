@@ -5,6 +5,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.apache.log4j.Logger;
 
 import com.weisi.Server.bean.SwitchCallbackPrxCache;
+import com.weisi.Server.frame.utils.SwitchUtil;
 import com.weisi.Server.switcher.ISwitchCallbackPrx;
 import com.weisi.Server.switcher.ISwitchCallbackPrxHelper;
 import com.weisi.Server.switcher._ISwitchDisp;
@@ -45,7 +46,11 @@ public class SwitchI extends _ISwitchDisp {
 
 		LOGGER.info("heartbeat");
 		// 心跳业务处理
-
+		
+		//客户端注册结束后  回调客户端
+		String msg = "客户端注册结束后  回调客户端 test msg.";
+		LOGGER.info("客户端注册结束后  回调客户端 = " + SwitchUtil.sendMsg(sn, msg));
+		
 		// 如果已经存在不更新缓存
 		if (switchCallbackPrxCacheMap.containsKey(sn)) {
 			SwitchCallbackPrxCache switchCallbackPrxCache = switchCallbackPrxCacheMap.get(sn);
@@ -69,7 +74,7 @@ public class SwitchI extends _ISwitchDisp {
 		// 如果用户不是定时心跳，而是使用ice自带的心跳必须执行以下代码
 		holdHeartbeat(current.con);
 		LOGGER.info("注册结束————register end, return true. \n");
-
+		
 		return true;
 	}
 

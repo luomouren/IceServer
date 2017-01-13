@@ -18,25 +18,7 @@ public class MySwitcherBoxService implements Service {
 	 */
 	@Override
 	public void start(String name, Communicator communicator, String[] arg2) {
-		
-		// 服务端发送数据给客户端 SwitchClient.java要运行
-		new Thread(new Runnable() {
-			@Override
-			public void run() {
-				System.out.println("服务端向客户端发送数据---send thread start.");
-				try {
-					Thread.sleep(20000);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-				// 和服务端心跳的标识
-				String sn = "0481deb6494848488048578316516694";
-				String msg = "test msg.";
-				System.out.println("result = " + SwitchUtil.sendMsg(sn, msg));
-			}
-		}).start();
-		
-		
+			
 		//IceBox
 		//创建objectAdapter 这里和service同名
 		_adapter = communicator.createObjectAdapter(name);
