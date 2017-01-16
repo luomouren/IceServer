@@ -1,7 +1,6 @@
 package com.weisi.Server.frame.init;
 
 import com.weisi.Server.frame.ice.PerfDispatchInterceptor;
-import com.weisi.Server.frame.utils.SwitchUtil;
 import com.weisi.Server.service.switcher.impl.SwitchI;
 
 import Ice.Communicator;
