@@ -8,6 +8,7 @@ import com.weisi.Server.bean.SwitchCallbackPrxCache;
 import com.weisi.Server.frame.utils.SwitchUtil;
 import com.weisi.Server.switcher.ISwitchCallbackPrx;
 import com.weisi.Server.switcher.ISwitchCallbackPrxHelper;
+import com.weisi.Server.switcher.SwitchException;
 import com.weisi.Server.switcher._ISwitchDisp;
 
 import Ice.Current;
@@ -62,7 +63,6 @@ public class SwitchI extends _ISwitchDisp {
 				switchCallbackPrxCacheMap.remove(sn);
 			}
 		}
-
 		ISwitchCallbackPrx switchCallbackPrx = ISwitchCallbackPrxHelper.checkedCast(con.createProxy(id));
 
 		switchCallbackPrxCache = new SwitchCallbackPrxCache();
@@ -95,13 +95,6 @@ public class SwitchI extends _ISwitchDisp {
 				LOGGER.debug("服务关闭——service close!");
 			}
 		});
-
-		// 每10/2 s向对方做心跳
-		// 服务端向客户端做心跳 客户端打印客户端的con.setCallback(new Ice.ConnectionCallback()
-		// con.setACM(new Ice.IntOptional(10), new
-		// Ice.Optional<Ice.ACMClose>(Ice.ACMClose.CloseOff),
-		// new
-		// Ice.Optional<Ice.ACMHeartbeat>(Ice.ACMHeartbeat.HeartbeatAlways));
 	}
 
 	/**
@@ -119,6 +112,14 @@ public class SwitchI extends _ISwitchDisp {
 		}
 
 		LOGGER.info("回调结束--ice tcp callBack end. return result = " + result);
+		return result;
+	}
+	/* 
+	 * 向客户端sn发送消息msg
+	 */
+	@Override
+	public boolean sendMsgToOtherClient(String otherSn, String msg, Current __current) throws SwitchException {
+		boolean result = SwitchUtil.sendMsg(otherSn, msg);
 		return result;
 	}
 

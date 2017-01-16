@@ -22,7 +22,9 @@ public class SwitchUtil {
 		LOGGER.info("发送数据参数为---ice tcp send params sn = " + sn);
 
 		boolean sendResult = true;
-
+		
+		LOGGER.info("SwitchI.switchCallbackPrxCacheMap==="+SwitchI.switchCallbackPrxCacheMap);
+		
 		if (!SwitchI.switchCallbackPrxCacheMap.containsKey(sn)) {
 			LOGGER.warn("发送地址Map不存在---PrxCacheMap is no exist, ice tcp send end, sendResult = false\n");
 			return false;
