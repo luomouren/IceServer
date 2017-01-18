@@ -9,6 +9,7 @@ public class SwitchCallbackPrxCache {
 
 	private ISwitchCallbackPrx iSwitchCallbackPrx;
 	private String ip;
+	private long lastTime;
 	private int port;
 
 	public ISwitchCallbackPrx getiSwitchCallbackPrx() {
@@ -17,6 +18,14 @@ public class SwitchCallbackPrxCache {
 
 	public void setiSwitchCallbackPrx(ISwitchCallbackPrx iSwitchCallbackPrx) {
 		this.iSwitchCallbackPrx = iSwitchCallbackPrx;
+	}
+
+	public long getLastTime() {
+		return lastTime;
+	}
+
+	public void setLastTime(long lastTime) {
+		this.lastTime = lastTime;
 	}
 
 	public String getIp() {
