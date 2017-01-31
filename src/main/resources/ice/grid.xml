@@ -23,7 +23,6 @@
         
        <!--  配置IceSSL时添加 -->
        <properties id="Secure-Ice.Admin">
-	        <!-- <property name="Ice.Plugin.IceSSL" value="IceSSL:createIceSSL"/> -->
 	        <property name="Ice.Plugin.IceSSL" value="IceSSL.PluginFactory"/>
 			<property name="IceSSL.CAs" value="cacert.pem"/>
 			<property name="IceSSL.CertFile" value="server.p12"/>
@@ -32,35 +31,14 @@
 			<property name="IceSSL.DefaultDir" value="certs1"/>
 			
 			<property name="Ice.Admin.Endpoints" value="ssl -h 192.168.5.1"/>
-	      	<!-- <property name="IceSSL.TrustOnly.Client" value="CN=Master;CN=Slave"/>
-	      	<property name="IceSSL.TrustOnly.Server.Ice.Admin" value="CN=node1;CN=node2"/> -->
 	    </properties>
-	   
         
-        
-         <properties id="mx">
+        <properties id="mx">
 	        <property name="IceMX.Metrics.Debug.GroupBy" value="id"/>
 	        <property name="IceMX.Metrics.Debug.Disabled" value="1"/>
 	        <property name="IceMX.Metrics.ByParent.GroupBy" value="parent"/>
 	        <property name="IceMX.Metrics.ByParent.Disabled" value="1"/>
         </properties>
-       <!-- <server-template id="Glacier2">
-	         <parameter name="instance-name" default="Glacier2"/>
-	         <parameter name="client-endpoints"/>
-	         <parameter name="server-endpoints"/>
-	         <parameter name="session-timeout" default="60"/>
-	         <server id="${instance-name}" activation="manual" exe="glacier2router">
-	            <properties>
-	               <properties refid="mx"/>
-	               <property name="Glacier2.Client.Endpoints" value="${client-endpoints}"/>
-	               <property name="Glacier2.Server.Endpoints" value="${server-endpoints}"/>
-	               <property name="Glacier2.InstanceName" value="${instance-name}"/>
-	               <property name="Glacier2.SessionTimeout" value="${session-timeout}"/>
-	            </properties>
-	         </server>
-       </server-template> -->
-        
-        
         
 		<server-template id="MyServerTemplate">
 			<parameter name="id" />
@@ -123,32 +101,11 @@
 		<node name="node1">
 			<server-instance template="MyServerTemplate" id="Node1_1" />
 			<server-instance template="MyServerTemplate" id="Node1_2" />
-			
-			  <!-- ssl -p 4064 -h localhost -->
-			<!-- <server-instance template="Glacier2" 
-			  instance-name="Glacier2" 
-			  client-endpoints="tcp -h localhost -p 4063" 
-			  server-endpoints="tcp -h localhost">
-				<properties>
-				   <property name="Glacier2.SessionManager" value="IceGrid/AdminSessionManager"/>
-				   <property name="Glacier2.PermissionsVerifier" value="Glacier2/NullPermissionsVerifier"/>
-				</properties>
-			</server-instance> -->
 		</node>
 		
 		<node name="node2">
 			<server-instance template="MyServerTemplate" id="Node2_1" />
 			<server-instance template="MyServerTemplate" id="Node2_2" />
-			<!-- 
-			<server-instance template="Glacier2" 
-			  instance-name="Glacier2" 
-			  client-endpoints="tcp -h localhost -p 4063" 
-			  server-endpoints="tcp -h localhost">
-				<properties>
-				   <property name="Glacier2.SessionManager" value="IceGrid/AdminSessionManager"/>
-				   <property name="Glacier2.PermissionsVerifier" value="Glacier2/NullPermissionsVerifier"/>
-				</properties>
-			</server-instance> -->
 		</node>
 	</application>
 </icegrid>
