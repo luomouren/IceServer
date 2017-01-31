@@ -1,8 +1,9 @@
 <icegrid>
 	<application name="gyApp">
 		<properties id="MultiThreaded">
-		<property name="Ice.PrintStackTraces" value="1" />
-	      	<property name="IceSSL.Trace.Security" value="2" />
+			<property name="Ice.PrintStackTraces" value="1" />
+			<!-- #开启SSL安全连接跟踪功能 -->
+	      	<property name="IceSSL.Trace.Security" value="1" />
 	      	<property name="Ice.ThreadPool.Client.Size" value="2" />
 	      	<property name="Ice.ThreadPool.Client.SizeMax" value="50" />
 	      	<property name="Ice.ThreadPool.Server.Size" value="10" />
@@ -16,9 +17,50 @@
 		</properties>
 		
 		<properties id="props">
-           	<property name="Ice.StdErr" value="G:\07ice\data\ice\ice_stderr.log"/>
-            <property name="Ice.StdOut" value="G:\07ice\data\ice\ice_stdout.log"/>
+           	<property name="Ice.StdErr" value="G:\07ice\logs\ice\ice_stderr.log"/>
+            <property name="Ice.StdOut" value="G:\07ice\logs\ice\ice_stdout.log"/>
         </properties>
+        
+       <!--  配置IceSSL时添加 -->
+       <properties id="Secure-Ice.Admin">
+	        <!-- <property name="Ice.Plugin.IceSSL" value="IceSSL:createIceSSL"/> -->
+	        <property name="Ice.Plugin.IceSSL" value="IceSSL.PluginFactory"/>
+			<property name="IceSSL.CAs" value="cacert.pem"/>
+			<property name="IceSSL.CertFile" value="server.p12"/>
+			<property name="IceSSL.Keystore" value="server.jks"/>
+			<property name="IceSSL.Password" value="password"/>
+			<property name="IceSSL.DefaultDir" value="certs1"/>
+			
+			<property name="Ice.Admin.Endpoints" value="ssl -h 192.168.5.1"/>
+	      	<!-- <property name="IceSSL.TrustOnly.Client" value="CN=Master;CN=Slave"/>
+	      	<property name="IceSSL.TrustOnly.Server.Ice.Admin" value="CN=node1;CN=node2"/> -->
+	    </properties>
+	   
+        
+        
+         <properties id="mx">
+	        <property name="IceMX.Metrics.Debug.GroupBy" value="id"/>
+	        <property name="IceMX.Metrics.Debug.Disabled" value="1"/>
+	        <property name="IceMX.Metrics.ByParent.GroupBy" value="parent"/>
+	        <property name="IceMX.Metrics.ByParent.Disabled" value="1"/>
+        </properties>
+       <!-- <server-template id="Glacier2">
+	         <parameter name="instance-name" default="Glacier2"/>
+	         <parameter name="client-endpoints"/>
+	         <parameter name="server-endpoints"/>
+	         <parameter name="session-timeout" default="60"/>
+	         <server id="${instance-name}" activation="manual" exe="glacier2router">
+	            <properties>
+	               <properties refid="mx"/>
+	               <property name="Glacier2.Client.Endpoints" value="${client-endpoints}"/>
+	               <property name="Glacier2.Server.Endpoints" value="${server-endpoints}"/>
+	               <property name="Glacier2.InstanceName" value="${instance-name}"/>
+	               <property name="Glacier2.SessionTimeout" value="${session-timeout}"/>
+	            </properties>
+	         </server>
+       </server-template> -->
+        
+        
         
 		<server-template id="MyServerTemplate">
 			<parameter name="id" />
@@ -27,36 +69,42 @@
 				<properties>
 					<properties refid="MultiThreaded" />
 					<properties refid="props" />
+					<properties refid="Secure-Ice.Admin" />
+					<properties refid="mx" />
 				</properties>
 				<option>-Xmx512M</option>
 				<!-- iceBox启动main方法 -->
 				<option>IceBox.Server</option>
 				<!-- 开发的代码路径 -->
 				<!-- 检查<env></env>标签配置是否错误,env标签不能有换行,最后一个env的变量不能使用;结尾,如果还是不行将classpatch加入到系统环境变量或是每个依赖的jar都写到env标签中。  -->
-				<env>CLASSPATH=G:\01Install\ZeroC\Ice-3.6.1\lib\*;G:\00workspace\00workspace\01JCXT\IceServer\target\Server\WEB-INF\classes;G:\00workspace\00workspace\01JCXT\IceServer\target\Server\WEB-INF\lib\*</env>
+				<env>CLASSPATH=G:\01Install\ZeroC\Ice-3.6.3\lib\*;G:\00workspace\00workspace\01JCXT\IceServer\target\Server\WEB-INF\classes;G:\00workspace\00workspace\01JCXT\IceServer\target\Server\WEB-INF\lib\*</env>
 				<!-- entry指定iceBox启动的service，replica-group指定endpoints组 -->
 				<service name="MyService" entry="com.weisi.Server.frame.ice.GenIceBoxService">
 					<property name="servantClassName" value="com.weisi.Server.service.serverIce.Impl.MyServiceImpl"/>
-					<adapter name="MyService" id="MyService${id}" endpoints="default"
+					<!-- 如需要客户端与服务程序使用ssl通信 endpoints为ssl-->
+					<adapter name="MyService" id="MyService${id}" endpoints="ssl -h 192.168.5.1"
 						replica-group="MyServiceRep">
 					</adapter>
 				</service>
+				
 				<service name="MyService2" entry="com.weisi.Server.frame.ice.GenIceBoxService">
 					<property name="servantClassName" value="com.weisi.Server.service.iceGrid.impl.MyServiceImpl2"/>
-					<adapter name="MyService2" id="MyService2${id}" endpoints="default"
+					<!-- 如需要客户端与服务程序使用ssl通信 endpoints为ssl-->
+					<adapter name="MyService2" id="MyService2${id}" endpoints="ssl -h 192.168.5.1"
 						replica-group="MyService2Rep">
 					</adapter>
 				</service>
 				
 				<service name="SwitchService" entry="com.weisi.Server.frame.ice.GenIceSwitcherBoxService">
 					<property name="servantClassName" value="com.weisi.Server.service.switcher.impl.SwitchI"/>
-					<adapter name="SwitchService" id="SwitchService${id}" endpoints="default"
+					<!-- 如需要客户端与服务程序使用ssl通信 endpoints为ssl-->
+					<adapter name="SwitchService" id="SwitchService${id}" endpoints="ssl -h 192.168.5.1"
 						replica-group="SwitchServiceRep">
 					</adapter>
 				</service>
-				
 			</icebox>
 		</server-template>
+		
 		<replica-group id="MyServiceRep">
 			<load-balancing type="round-robin" n-replicas="0" />
 			<!-- 指定servant的名字 -->
@@ -75,10 +123,32 @@
 		<node name="node1">
 			<server-instance template="MyServerTemplate" id="Node1_1" />
 			<server-instance template="MyServerTemplate" id="Node1_2" />
+			
+			  <!-- ssl -p 4064 -h localhost -->
+			<!-- <server-instance template="Glacier2" 
+			  instance-name="Glacier2" 
+			  client-endpoints="tcp -h localhost -p 4063" 
+			  server-endpoints="tcp -h localhost">
+				<properties>
+				   <property name="Glacier2.SessionManager" value="IceGrid/AdminSessionManager"/>
+				   <property name="Glacier2.PermissionsVerifier" value="Glacier2/NullPermissionsVerifier"/>
+				</properties>
+			</server-instance> -->
 		</node>
+		
 		<node name="node2">
 			<server-instance template="MyServerTemplate" id="Node2_1" />
 			<server-instance template="MyServerTemplate" id="Node2_2" />
+			<!-- 
+			<server-instance template="Glacier2" 
+			  instance-name="Glacier2" 
+			  client-endpoints="tcp -h localhost -p 4063" 
+			  server-endpoints="tcp -h localhost">
+				<properties>
+				   <property name="Glacier2.SessionManager" value="IceGrid/AdminSessionManager"/>
+				   <property name="Glacier2.PermissionsVerifier" value="Glacier2/NullPermissionsVerifier"/>
+				</properties>
+			</server-instance> -->
 		</node>
 	</application>
 </icegrid>

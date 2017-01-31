@@ -290,12 +290,22 @@
 		<dependency>
 		    <groupId>com.zeroc</groupId>
 		    <artifactId>ice</artifactId>
-		    <version>3.6.2</version>
+		    <version>3.6.3</version>
 		</dependency>
 		<dependency>
 		    <groupId>com.zeroc</groupId>
 		    <artifactId>icebox</artifactId>
-		    <version>3.6.2</version>
+		    <version>3.6.3</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.zeroc</groupId>
+		    <artifactId>glacier2</artifactId>
+		    <version>3.6.3</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.zeroc</groupId>
+		    <artifactId>icegrid</artifactId>
+		    <version>3.6.3</version>
 		</dependency>
 		<!-- com.zeroc/ice end************-->
 	
