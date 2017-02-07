@@ -57,9 +57,9 @@
 				<!-- 检查<env></env>标签配置是否错误,env标签不能有换行,最后一个env的变量不能使用;结尾,如果还是不行将classpatch加入到系统环境变量或是每个依赖的jar都写到env标签中。  -->
 				<env>CLASSPATH=G:\01Install\ZeroC\Ice-3.6.3\lib\*;G:\00workspace\00workspace\01JCXT\IceServer\target\Server\WEB-INF\classes;G:\00workspace\00workspace\01JCXT\IceServer\target\Server\WEB-INF\lib\*</env>
 				<!-- entry指定iceBox启动的service，replica-group指定endpoints组 -->
-				<service name="MyService" entry="com.weisi.Server.frame.ice.GenIceBoxService">
+				<!-- <service name="MyService" entry="com.weisi.Server.frame.ice.GenIceBoxService">
 					<property name="servantClassName" value="com.weisi.Server.service.serverIce.Impl.MyServiceImpl"/>
-					<!-- 如需要客户端与服务程序使用ssl通信 endpoints为ssl-->
+					如需要客户端与服务程序使用ssl通信 endpoints为ssl
 					<adapter name="MyService" id="MyService${id}" endpoints="ssl -h 192.168.5.1"
 						replica-group="MyServiceRep">
 					</adapter>
@@ -67,11 +67,11 @@
 				
 				<service name="MyService2" entry="com.weisi.Server.frame.ice.GenIceBoxService">
 					<property name="servantClassName" value="com.weisi.Server.service.iceGrid.impl.MyServiceImpl2"/>
-					<!-- 如需要客户端与服务程序使用ssl通信 endpoints为ssl-->
+					如需要客户端与服务程序使用ssl通信 endpoints为ssl
 					<adapter name="MyService2" id="MyService2${id}" endpoints="ssl -h 192.168.5.1"
 						replica-group="MyService2Rep">
 					</adapter>
-				</service>
+				</service> -->
 				
 				<service name="SwitchService" entry="com.weisi.Server.frame.ice.GenIceSwitcherBoxService">
 					<property name="servantClassName" value="com.weisi.Server.service.switcher.impl.SwitchI"/>
@@ -83,15 +83,15 @@
 			</icebox>
 		</server-template>
 		
-		<replica-group id="MyServiceRep">
+		<!-- <replica-group id="MyServiceRep">
 			<load-balancing type="round-robin" n-replicas="0" />
-			<!-- 指定servant的名字 -->
+			指定servant的名字
 			<object identity="MyService" type="::serverIce::MyService" />
 		</replica-group>
 		<replica-group id="MyService2Rep">
 			<load-balancing type="round-robin" n-replicas="0" />
 			<object identity="MyService2" type="::gridServer::MyService" />
-		</replica-group>
+		</replica-group> -->
 		<replica-group id="SwitchServiceRep">
 			<load-balancing type="round-robin" n-replicas="0" />
 			<object identity="SwitchService" type="::switcher::ISwitchCallback" />
