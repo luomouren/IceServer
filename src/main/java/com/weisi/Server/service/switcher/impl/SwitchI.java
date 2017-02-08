@@ -14,12 +14,6 @@ import com.weisi.Server.switcher.ISwitchCallbackPrxHelper;
 import com.weisi.Server.switcher.SwitchException;
 import com.weisi.Server.switcher._ISwitchDisp;
 
-import Glacier2.CannotCreateSessionException;
-import Glacier2.PermissionDeniedException;
-import Glacier2.RouterPrx;
-import Glacier2.RouterPrxHelper;
-import Glacier2.SessionPrx;
-import Ice.ACM;
 import Ice.Current;
 import Ice.Identity;
 
@@ -106,6 +100,7 @@ public class SwitchI extends _ISwitchDisp {
 		switchCallbackPrxCache.setIp(ipConn.remoteAddress);
 		switchCallbackPrxCache.setPort(ipConn.remotePort);
 		switchCallbackPrxCache.setLastTime(time);
+		switchCallbackPrxCache.setSn(sn);
 		
 		switchCallbackPrxCacheMap.put(sn, switchCallbackPrxCache);
 		// 如果用户不是定时心跳，而是使用ice自带的心跳必须执行以下代码
