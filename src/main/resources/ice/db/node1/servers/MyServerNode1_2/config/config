@@ -1,0 +1,34 @@
+# Configuration file (02/09/17 14:10:47.718)
+
+# Server configuration
+Ice.Admin.ServerId=MyServerNode1_2
+Ice.ProgramName=MyServerNode1_2
+IceBox.Service.SwitchService=com.weisi.Server.frame.ice.GenIceSwitcherBoxService --Ice.Config='G:\00workspace\00workspace\01JCXT\IceServer\src\main\resources\ice/db/node1/servers/MyServerNode1_2/config/config_SwitchService'
+IceBox.LoadOrder=SwitchService
+# Server descriptor properties
+Ice.PrintStackTraces=1
+IceSSL.Trace.Security=1
+Ice.ThreadPool.Client.Size=2
+Ice.ThreadPool.Client.SizeMax=50
+Ice.ThreadPool.Server.Size=10
+Ice.ThreadPool.Server.SizeMax=100
+IceBox.InheritProperties=1
+Ice.Override.ConnectTimeout=5000
+Ice.Override.Timeout=10000
+IceBox.Trace.ServiceObserver=1
+Ice.Default.LocatorCacheTimeout=300
+Ice.BackgroundLocatorCacheUpdates=1
+Ice.StdErr=G:\ice_stderr.log
+Ice.StdOut=G:\ice_stdout.log
+Ice.Plugin.IceSSL=IceSSL.PluginFactory
+IceSSL.CAs=cacert.pem
+IceSSL.CertFile=server.p12
+IceSSL.Keystore=server.jks
+IceSSL.Password=password
+IceSSL.DefaultDir=certs1
+Ice.Admin.Endpoints=ssl -h 192.168.5.1
+IceMX.Metrics.Debug.GroupBy=id
+IceMX.Metrics.Debug.Disabled=1
+IceMX.Metrics.ByParent.GroupBy=parent
+IceMX.Metrics.ByParent.Disabled=1
+Ice.Default.Locator=IceGrid/Locator:ssl -h 192.168.5.1 -p 4062

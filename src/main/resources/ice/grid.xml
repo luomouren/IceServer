@@ -17,8 +17,8 @@
 		</properties>
 		
 		<properties id="props">
-           	<property name="Ice.StdErr" value="G:\07ice\logs\ice\ice_stderr.log"/>
-            <property name="Ice.StdOut" value="G:\07ice\logs\ice\ice_stdout.log"/>
+           	<property name="Ice.StdErr" value="G:\ice_stderr.log"/>
+            <property name="Ice.StdOut" value="G:\ice_stdout.log"/>
         </properties>
         
        <!--  配置IceSSL时添加 -->
@@ -57,7 +57,9 @@
 				<!-- 检查<env></env>标签配置是否错误,env标签不能有换行,最后一个env的变量不能使用;结尾,如果还是不行将classpatch加入到系统环境变量或是每个依赖的jar都写到env标签中。  -->
 				<!-- <env>CLASSPATH=G:\01Install\ZeroC\Ice-3.6.3\lib\*;G:\00workspace\00workspace\01JCXT\IceServer\target\Server\WEB-INF\classes;G:\00workspace\00workspace\01JCXT\IceServer\target\Server\WEB-INF\lib\*</env>
 				 -->
-				<env>LANG=en</env>
+				 
+				<env>CLASSPATH=G:\00workspace\00workspace\01JCXT\IceServer\target\Server\WEB-INF\classes;G:\00workspace\00workspace\01JCXT\IceServer\target\Server\WEB-INF\lib\*</env>
+				
 				<!-- entry指定iceBox启动的service，replica-group指定endpoints组 -->
 				<!-- <service name="MyService" entry="com.weisi.Server.frame.ice.GenIceBoxService">
 					<property name="servantClassName" value="com.weisi.Server.service.serverIce.Impl.MyServiceImpl"/>

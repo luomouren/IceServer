@@ -1,0 +1,9 @@
+# Configuration file (02/09/17 14:10:47.712)
+
+# Object adapter SwitchService
+SwitchService.Endpoints=ssl -h 192.168.5.1
+SwitchService.AdapterId=SwitchServiceNode1_1
+SwitchService.ReplicaGroupId=SwitchServiceRep
+# Service descriptor properties
+servantClassName=com.weisi.Server.service.switcher.impl.SwitchI
+Ice.Default.Locator=IceGrid/Locator:ssl -h 192.168.5.1 -p 4062
