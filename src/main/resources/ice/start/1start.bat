@@ -1,4 +1,4 @@
-::1¡¢Ice RegistryÆô¶¯ÃüÁî
+::1ã€Ice Registryå¯åŠ¨å‘½ä»¤
 G:
 cd G:\00workspace\00workspace\01JCXT\IceServer\src\main\resources\ice
 icegridregistry --Ice.Config=G:\00workspace\00workspace\01JCXT\IceServer\src\main\resources\ice\registry.cfg
