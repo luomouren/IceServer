@@ -11,6 +11,7 @@ public class SwitchCallbackPrxCache {
 	private String ip;//客户端连接ip
 	private String sn;//客户端唯一标识
 	private long lastTime;//客户端最后一次请求时间
+	private long lastServerTime;//接收客户端最后一次请求时的服务器时间
 	private int port;//客户端连接端口
 
 	public ISwitchCallbackPrx getiSwitchCallbackPrx() {
@@ -51,6 +52,14 @@ public class SwitchCallbackPrxCache {
 
 	public void setSn(String sn) {
 		this.sn = sn;
+	}
+
+	public long getLastServerTime() {
+		return lastServerTime;
+	}
+
+	public void setLastServerTime(long lastServerTime) {
+		this.lastServerTime = lastServerTime;
 	}
 
 }

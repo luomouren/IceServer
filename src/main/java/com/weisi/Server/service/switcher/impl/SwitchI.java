@@ -72,6 +72,7 @@ public class SwitchI extends _ISwitchDisp {
 				LOGGER.info("该客户端已经存在——already exist cache, return true\n");
 				//更新 switchCallbackPrxCache中的时间
 				switchCallbackPrxCache.setLastTime(time);
+				switchCallbackPrxCache.setLastServerTime(currentTime);
 				switchCallbackPrxCacheMap.put(sn, switchCallbackPrxCache);
 				return true;
 			} else {
@@ -101,6 +102,7 @@ public class SwitchI extends _ISwitchDisp {
 		switchCallbackPrxCache.setPort(ipConn.remotePort);
 		switchCallbackPrxCache.setLastTime(time);
 		switchCallbackPrxCache.setSn(sn);
+		switchCallbackPrxCache.setLastServerTime(currentTime);
 		
 		switchCallbackPrxCacheMap.put(sn, switchCallbackPrxCache);
 		// 如果用户不是定时心跳，而是使用ice自带的心跳必须执行以下代码
@@ -121,7 +123,7 @@ public class SwitchI extends _ISwitchDisp {
             Entry<String, SwitchCallbackPrxCache> entry=it.next();  
             //时间戳之差DT判断
 			SwitchCallbackPrxCache cache = entry.getValue();
-			long lastTime = cache.getLastTime();
+			long lastTime = cache.getLastServerTime();
 			long DT=currentTime-lastTime;
 			
 			if(DT>20000){
