@@ -32,11 +32,9 @@ module switcher
 		/**
 		 * 对服务端进行心跳（无异常则表示成功）
 		 * @param sn 设备串号
-		 * @param netMode 网络接入方式 0:没有 1:3G 2:4G 3:以太网 4：wifi 5：2G
-		 * @param netStrength 网络信号强度
 		 * @param time 请求时间戳，13位 毫秒级别
 		 */
-		bool heartbeat(Ice::Identity id, string sn, int netMode, int netStrength,long time) throws SwitchException;
+		bool heartbeat(Ice::Identity id, string sn, long time) throws SwitchException;
 		
 		/**
 		 * 向otherSn客户端发送消息

@@ -38,10 +38,10 @@ public class SwitchI extends _ISwitchDisp {
 	 * 心跳(如果用户自己定时做心跳可以心跳时传参)
 	 */
 	@Override
-	public boolean heartbeat(Identity id, String sn, int netMode, int netStrength, long time,Current current) {
+	public boolean heartbeat(Identity id, String sn,  long time,Current current) {
 		LOGGER.info(switchCallbackPrxCacheMap.size());
 		LOGGER.info("TCP心跳开始——参数——tcp heartbeat begin params sn = " + sn + " id.name = " + id.name + ", category = "
-				+ id.category + ", netMode = " + netMode + ", netStrength = " + netStrength);
+				+ id.category );
 		Ice.Connection con = current.con;
 		Ice.IPConnectionInfo ipConn = (Ice.IPConnectionInfo) con.getInfo();
 		if (null != ipConn) {
@@ -59,11 +59,6 @@ public class SwitchI extends _ISwitchDisp {
 		refreshMap(switchCallbackPrxCacheMap,currentTime);
 		LOGGER.info("客户端注册结束后  回调客户端 = " + SwitchUtil.sendMsg(sn, msg));
 		
-		/*ACM s= con.getACM();
-		System.out.println(s.heartbeat);
-		System.out.println(s.timeout);//60
-		System.out.println(con.timeout());//60000
-*/		
 		// 如果已经存在不更新缓存
 		if (switchCallbackPrxCacheMap.containsKey(sn)) {
 			SwitchCallbackPrxCache switchCallbackPrxCache = switchCallbackPrxCacheMap.get(sn);
@@ -80,21 +75,6 @@ public class SwitchI extends _ISwitchDisp {
 			}
 		}
 		ISwitchCallbackPrx switchCallbackPrx = ISwitchCallbackPrxHelper.checkedCast(con.createProxy(id));
-		
-		
-		/*RouterPrx tournt = RouterPrxHelper.checkedCast(con.createProxy(id));
-		try {
-			SessionPrx session = tournt.createSession("", sn);
-		} catch (CannotCreateSessionException e) {
-			e.printStackTrace();
-			LOGGER.error("创建Session时出错，错误为:"+e);
-		} catch (PermissionDeniedException e) {
-			e.printStackTrace();
-			LOGGER.error("创建Session时出错，错误为:"+e);
-		}
-		int ACMTimeout =  tournt.getACMTimeout();
-		System.out.println("ACMTimeout==============="+ACMTimeout);*/
-		
 		
 		switchCallbackPrxCache = new SwitchCallbackPrxCache();
 		switchCallbackPrxCache.setiSwitchCallbackPrx(switchCallbackPrx);

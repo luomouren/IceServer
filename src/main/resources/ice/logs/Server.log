@@ -1,251 +1,53 @@
-2017-02-09 13:34:12,003 INFO  com.weisi.Server.frame.ice.GenIceSwitcherBoxService - load servant class com.weisi.Server.service.switcher.impl.SwitchI
-2017-02-09 13:34:12,036 INFO  com.weisi.Server.frame.ice.GenIceSwitcherBoxService - load servant class com.weisi.Server.service.switcher.impl.SwitchI
-2017-02-09 13:34:13,014 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 0
-2017-02-09 13:34:13,014 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = , netMode = 1, netStrength = 2
-2017-02-09 13:34:13,014 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:18997
-2017-02-09 13:34:13,015 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:18983
-2017-02-09 13:34:13,015 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
-2017-02-09 13:34:13,016 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
-2017-02-09 13:34:13,016 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={}
-2017-02-09 13:34:13,016 WARN  com.weisi.Server.frame.utils.SwitchUtil - 发送地址Map不存在---PrxCacheMap is no exist, ice tcp send end, sendResult = false
+2017-02-15 10:57:37,825 INFO  com.weisi.Server.frame.ice.GenIceSwitcherBoxService - load servant class com.weisi.Server.service.switcher.impl.SwitchI
+2017-02-15 10:57:37,868 INFO  com.weisi.Server.frame.ice.GenIceSwitcherBoxService - load servant class com.weisi.Server.service.switcher.impl.SwitchI
+2017-02-15 10:57:38,592 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 0
+2017-02-15 10:57:38,592 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = 
+2017-02-15 10:57:38,592 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:8476
+2017-02-15 10:57:38,593 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:8470
+2017-02-15 10:57:38,593 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
+2017-02-15 10:57:38,594 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
+2017-02-15 10:57:38,594 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={}
+2017-02-15 10:57:38,594 WARN  com.weisi.Server.frame.utils.SwitchUtil - 发送地址Map不存在---PrxCacheMap is no exist, ice tcp send end, sendResult = false
 
-2017-02-09 13:34:13,016 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = false
-2017-02-09 13:34:13,029 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 注册结束————register end, return true. 
+2017-02-15 10:57:38,594 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = false
+2017-02-15 10:57:38,606 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 注册结束————register end, return true. 
 
-2017-02-09 13:34:23,016 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 1
-2017-02-09 13:34:23,017 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = , netMode = 1, netStrength = 2
-2017-02-09 13:34:23,017 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:18997
-2017-02-09 13:34:23,017 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:18983
-2017-02-09 13:34:23,017 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
-2017-02-09 13:34:23,018 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
-2017-02-09 13:34:23,019 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={0481deb6494848488048578316516694=com.weisi.Server.bean.SwitchCallbackPrxCache@5af07af9}
-2017-02-09 13:34:23,025 INFO  com.weisi.Server.frame.utils.SwitchUtil - ice tcp send end, sendResult = true
+2017-02-15 10:57:48,596 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 1
+2017-02-15 10:57:48,596 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = 
+2017-02-15 10:57:48,596 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:8476
+2017-02-15 10:57:48,596 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:8470
+2017-02-15 10:57:48,597 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
+2017-02-15 10:57:48,597 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
+2017-02-15 10:57:48,598 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={0481deb6494848488048578316516694=com.weisi.Server.bean.SwitchCallbackPrxCache@5537149f}
+2017-02-15 10:57:48,610 INFO  com.weisi.Server.frame.utils.SwitchUtil - ice tcp send end, sendResult = true
 
-2017-02-09 13:34:23,025 INFO  com.weisi.Server.frame.utils.SwitchUtil - sendResult = true
-2017-02-09 13:34:23,025 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = true
-2017-02-09 13:34:23,026 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 该客户端已经存在——already exist cache, return true
+2017-02-15 10:57:48,610 INFO  com.weisi.Server.frame.utils.SwitchUtil - sendResult = true
+2017-02-15 10:57:48,611 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = true
+2017-02-15 10:57:48,611 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 该客户端已经存在——already exist cache, return true
 
-2017-02-09 13:34:33,020 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 1
-2017-02-09 13:34:33,021 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = , netMode = 1, netStrength = 2
-2017-02-09 13:34:33,021 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:18997
-2017-02-09 13:34:33,021 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:18983
-2017-02-09 13:34:33,021 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
-2017-02-09 13:34:33,021 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
-2017-02-09 13:34:33,021 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={0481deb6494848488048578316516694=com.weisi.Server.bean.SwitchCallbackPrxCache@5af07af9}
-2017-02-09 13:34:33,024 INFO  com.weisi.Server.frame.utils.SwitchUtil - ice tcp send end, sendResult = true
+2017-02-15 10:57:58,598 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 1
+2017-02-15 10:57:58,598 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = 
+2017-02-15 10:57:58,599 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:8476
+2017-02-15 10:57:58,599 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:8470
+2017-02-15 10:57:58,599 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
+2017-02-15 10:57:58,599 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
+2017-02-15 10:57:58,599 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={0481deb6494848488048578316516694=com.weisi.Server.bean.SwitchCallbackPrxCache@5537149f}
+2017-02-15 10:57:58,605 INFO  com.weisi.Server.frame.utils.SwitchUtil - ice tcp send end, sendResult = true
 
-2017-02-09 13:34:33,024 INFO  com.weisi.Server.frame.utils.SwitchUtil - sendResult = true
-2017-02-09 13:34:33,024 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = true
-2017-02-09 13:34:33,024 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 该客户端已经存在——already exist cache, return true
+2017-02-15 10:57:58,605 INFO  com.weisi.Server.frame.utils.SwitchUtil - sendResult = true
+2017-02-15 10:57:58,606 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = true
+2017-02-15 10:57:58,606 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 该客户端已经存在——already exist cache, return true
 
-2017-02-09 13:34:43,020 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 1
-2017-02-09 13:34:43,021 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = , netMode = 1, netStrength = 2
-2017-02-09 13:34:43,021 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:18997
-2017-02-09 13:34:43,021 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:18983
-2017-02-09 13:34:43,021 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
-2017-02-09 13:34:43,021 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
-2017-02-09 13:34:43,021 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={0481deb6494848488048578316516694=com.weisi.Server.bean.SwitchCallbackPrxCache@5af07af9}
-2017-02-09 13:34:43,023 INFO  com.weisi.Server.frame.utils.SwitchUtil - ice tcp send end, sendResult = true
+2017-02-15 10:58:08,599 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 1
+2017-02-15 10:58:08,599 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = 
+2017-02-15 10:58:08,599 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:8476
+2017-02-15 10:58:08,599 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:8470
+2017-02-15 10:58:08,599 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
+2017-02-15 10:58:08,599 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
+2017-02-15 10:58:08,600 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={0481deb6494848488048578316516694=com.weisi.Server.bean.SwitchCallbackPrxCache@5537149f}
+2017-02-15 10:58:08,603 INFO  com.weisi.Server.frame.utils.SwitchUtil - ice tcp send end, sendResult = true
 
-2017-02-09 13:34:43,023 INFO  com.weisi.Server.frame.utils.SwitchUtil - sendResult = true
-2017-02-09 13:34:43,023 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = true
-2017-02-09 13:34:43,023 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 该客户端已经存在——already exist cache, return true
-
-2017-02-09 14:01:30,471 INFO  com.weisi.Server.frame.ice.GenIceSwitcherBoxService - load servant class com.weisi.Server.service.switcher.impl.SwitchI
-2017-02-09 14:01:30,649 INFO  com.weisi.Server.frame.ice.GenIceSwitcherBoxService - load servant class com.weisi.Server.service.switcher.impl.SwitchI
-2017-02-09 14:01:31,495 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 0
-2017-02-09 14:01:31,495 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = , netMode = 1, netStrength = 2
-2017-02-09 14:01:31,496 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:22813
-2017-02-09 14:01:31,496 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:22798
-2017-02-09 14:01:31,496 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
-2017-02-09 14:01:31,497 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
-2017-02-09 14:01:31,497 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={}
-2017-02-09 14:01:31,497 WARN  com.weisi.Server.frame.utils.SwitchUtil - 发送地址Map不存在---PrxCacheMap is no exist, ice tcp send end, sendResult = false
-
-2017-02-09 14:01:31,497 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = false
-2017-02-09 14:01:31,509 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 注册结束————register end, return true. 
-
-2017-02-09 14:02:00,425 INFO  com.weisi.Server.frame.ice.GenIceSwitcherBoxService - load servant class com.weisi.Server.service.switcher.impl.SwitchI
-2017-02-09 14:02:00,456 INFO  com.weisi.Server.frame.ice.GenIceSwitcherBoxService - load servant class com.weisi.Server.service.switcher.impl.SwitchI
-2017-02-09 14:02:01,174 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 0
-2017-02-09 14:02:01,174 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = , netMode = 1, netStrength = 2
-2017-02-09 14:02:01,174 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:22896
-2017-02-09 14:02:01,174 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:22886
-2017-02-09 14:02:01,174 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
-2017-02-09 14:02:01,175 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
-2017-02-09 14:02:01,175 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={}
-2017-02-09 14:02:01,175 WARN  com.weisi.Server.frame.utils.SwitchUtil - 发送地址Map不存在---PrxCacheMap is no exist, ice tcp send end, sendResult = false
-
-2017-02-09 14:02:01,175 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = false
-2017-02-09 14:02:01,186 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 注册结束————register end, return true. 
-
-2017-02-09 14:03:23,384 INFO  com.weisi.Server.frame.ice.GenIceSwitcherBoxService - load servant class com.weisi.Server.service.switcher.impl.SwitchI
-2017-02-09 14:03:23,392 INFO  com.weisi.Server.frame.ice.GenIceSwitcherBoxService - load servant class com.weisi.Server.service.switcher.impl.SwitchI
-2017-02-09 14:03:24,213 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 0
-2017-02-09 14:03:24,214 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = , netMode = 1, netStrength = 2
-2017-02-09 14:03:24,214 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:23034
-2017-02-09 14:03:24,214 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:23027
-2017-02-09 14:03:24,214 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
-2017-02-09 14:03:24,215 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
-2017-02-09 14:03:24,215 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={}
-2017-02-09 14:03:24,215 WARN  com.weisi.Server.frame.utils.SwitchUtil - 发送地址Map不存在---PrxCacheMap is no exist, ice tcp send end, sendResult = false
-
-2017-02-09 14:03:24,215 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = false
-2017-02-09 14:03:24,228 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 注册结束————register end, return true. 
-
-2017-02-09 14:03:34,221 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 1
-2017-02-09 14:03:34,221 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = , netMode = 1, netStrength = 2
-2017-02-09 14:03:34,222 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:23034
-2017-02-09 14:03:34,222 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:23027
-2017-02-09 14:03:34,222 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
-2017-02-09 14:03:34,223 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
-2017-02-09 14:03:34,224 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={0481deb6494848488048578316516694=com.weisi.Server.bean.SwitchCallbackPrxCache@5327fdae}
-2017-02-09 14:03:34,234 INFO  com.weisi.Server.frame.utils.SwitchUtil - ice tcp send end, sendResult = true
-
-2017-02-09 14:03:34,234 INFO  com.weisi.Server.frame.utils.SwitchUtil - sendResult = true
-2017-02-09 14:03:34,234 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = true
-2017-02-09 14:03:34,235 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 该客户端已经存在——already exist cache, return true
-
-2017-02-09 14:03:44,226 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 1
-2017-02-09 14:03:44,226 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = , netMode = 1, netStrength = 2
-2017-02-09 14:03:44,226 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:23034
-2017-02-09 14:03:44,227 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:23027
-2017-02-09 14:03:44,227 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
-2017-02-09 14:03:44,227 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
-2017-02-09 14:03:44,227 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={0481deb6494848488048578316516694=com.weisi.Server.bean.SwitchCallbackPrxCache@5327fdae}
-2017-02-09 14:03:44,232 INFO  com.weisi.Server.frame.utils.SwitchUtil - ice tcp send end, sendResult = true
-
-2017-02-09 14:03:44,232 INFO  com.weisi.Server.frame.utils.SwitchUtil - sendResult = true
-2017-02-09 14:03:44,232 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = true
-2017-02-09 14:03:44,233 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 该客户端已经存在——already exist cache, return true
-
-2017-02-09 14:03:54,228 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 1
-2017-02-09 14:03:54,228 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = , netMode = 1, netStrength = 2
-2017-02-09 14:03:54,229 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:23034
-2017-02-09 14:03:54,229 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:23027
-2017-02-09 14:03:54,229 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
-2017-02-09 14:03:54,230 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
-2017-02-09 14:03:54,230 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={0481deb6494848488048578316516694=com.weisi.Server.bean.SwitchCallbackPrxCache@5327fdae}
-2017-02-09 14:03:54,235 INFO  com.weisi.Server.frame.utils.SwitchUtil - ice tcp send end, sendResult = true
-
-2017-02-09 14:03:54,235 INFO  com.weisi.Server.frame.utils.SwitchUtil - sendResult = true
-2017-02-09 14:03:54,236 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = true
-2017-02-09 14:03:54,236 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 该客户端已经存在——already exist cache, return true
-
-2017-02-09 14:04:04,230 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 1
-2017-02-09 14:04:04,230 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = , netMode = 1, netStrength = 2
-2017-02-09 14:04:04,230 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:23034
-2017-02-09 14:04:04,231 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:23027
-2017-02-09 14:04:04,231 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
-2017-02-09 14:04:04,232 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
-2017-02-09 14:04:04,232 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={0481deb6494848488048578316516694=com.weisi.Server.bean.SwitchCallbackPrxCache@5327fdae}
-2017-02-09 14:04:04,237 INFO  com.weisi.Server.frame.utils.SwitchUtil - ice tcp send end, sendResult = true
-
-2017-02-09 14:04:04,237 INFO  com.weisi.Server.frame.utils.SwitchUtil - sendResult = true
-2017-02-09 14:04:04,237 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = true
-2017-02-09 14:04:04,238 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 该客户端已经存在——already exist cache, return true
-
-2017-02-09 14:04:14,231 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 1
-2017-02-09 14:04:14,231 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = , netMode = 1, netStrength = 2
-2017-02-09 14:04:14,231 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:23034
-2017-02-09 14:04:14,232 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:23027
-2017-02-09 14:04:14,232 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
-2017-02-09 14:04:14,232 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
-2017-02-09 14:04:14,232 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={0481deb6494848488048578316516694=com.weisi.Server.bean.SwitchCallbackPrxCache@5327fdae}
-2017-02-09 14:04:14,234 INFO  com.weisi.Server.frame.utils.SwitchUtil - ice tcp send end, sendResult = true
-
-2017-02-09 14:04:14,234 INFO  com.weisi.Server.frame.utils.SwitchUtil - sendResult = true
-2017-02-09 14:04:14,234 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = true
-2017-02-09 14:04:14,234 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 该客户端已经存在——already exist cache, return true
-
-2017-02-09 14:04:24,233 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 1
-2017-02-09 14:04:24,234 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = , netMode = 1, netStrength = 2
-2017-02-09 14:04:24,234 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:23034
-2017-02-09 14:04:24,234 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:23027
-2017-02-09 14:04:24,234 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
-2017-02-09 14:04:24,234 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
-2017-02-09 14:04:24,234 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={0481deb6494848488048578316516694=com.weisi.Server.bean.SwitchCallbackPrxCache@5327fdae}
-2017-02-09 14:04:24,237 INFO  com.weisi.Server.frame.utils.SwitchUtil - ice tcp send end, sendResult = true
-
-2017-02-09 14:04:24,237 INFO  com.weisi.Server.frame.utils.SwitchUtil - sendResult = true
-2017-02-09 14:04:24,237 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = true
-2017-02-09 14:04:24,237 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 该客户端已经存在——already exist cache, return true
-
-2017-02-09 14:04:34,237 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 1
-2017-02-09 14:04:34,238 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = , netMode = 1, netStrength = 2
-2017-02-09 14:04:34,238 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:23034
-2017-02-09 14:04:34,238 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:23027
-2017-02-09 14:04:34,239 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
-2017-02-09 14:04:34,239 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
-2017-02-09 14:04:34,239 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={0481deb6494848488048578316516694=com.weisi.Server.bean.SwitchCallbackPrxCache@5327fdae}
-2017-02-09 14:04:34,247 INFO  com.weisi.Server.frame.utils.SwitchUtil - ice tcp send end, sendResult = true
-
-2017-02-09 14:04:34,247 INFO  com.weisi.Server.frame.utils.SwitchUtil - sendResult = true
-2017-02-09 14:04:34,248 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = true
-2017-02-09 14:04:34,248 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 该客户端已经存在——already exist cache, return true
-
-2017-02-09 14:04:44,238 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 1
-2017-02-09 14:04:44,238 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = , netMode = 1, netStrength = 2
-2017-02-09 14:04:44,238 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:23034
-2017-02-09 14:04:44,239 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:23027
-2017-02-09 14:04:44,239 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
-2017-02-09 14:04:44,239 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
-2017-02-09 14:04:44,239 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={0481deb6494848488048578316516694=com.weisi.Server.bean.SwitchCallbackPrxCache@5327fdae}
-2017-02-09 14:04:44,240 INFO  com.weisi.Server.frame.utils.SwitchUtil - ice tcp send end, sendResult = true
-
-2017-02-09 14:04:44,241 INFO  com.weisi.Server.frame.utils.SwitchUtil - sendResult = true
-2017-02-09 14:04:44,241 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = true
-2017-02-09 14:04:44,241 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 该客户端已经存在——already exist cache, return true
-
-2017-02-09 14:04:54,239 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 1
-2017-02-09 14:04:54,239 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = , netMode = 1, netStrength = 2
-2017-02-09 14:04:54,239 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:23034
-2017-02-09 14:04:54,239 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:23027
-2017-02-09 14:04:54,239 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
-2017-02-09 14:04:54,239 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
-2017-02-09 14:04:54,239 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={0481deb6494848488048578316516694=com.weisi.Server.bean.SwitchCallbackPrxCache@5327fdae}
-2017-02-09 14:04:54,241 INFO  com.weisi.Server.frame.utils.SwitchUtil - ice tcp send end, sendResult = true
-
-2017-02-09 14:04:54,241 INFO  com.weisi.Server.frame.utils.SwitchUtil - sendResult = true
-2017-02-09 14:04:54,241 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = true
-2017-02-09 14:04:54,241 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 该客户端已经存在——already exist cache, return true
-
-2017-02-09 14:05:04,240 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 1
-2017-02-09 14:05:04,241 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = , netMode = 1, netStrength = 2
-2017-02-09 14:05:04,241 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:23034
-2017-02-09 14:05:04,241 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:23027
-2017-02-09 14:05:04,241 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
-2017-02-09 14:05:04,241 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
-2017-02-09 14:05:04,241 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={0481deb6494848488048578316516694=com.weisi.Server.bean.SwitchCallbackPrxCache@5327fdae}
-2017-02-09 14:05:04,244 INFO  com.weisi.Server.frame.utils.SwitchUtil - ice tcp send end, sendResult = true
-
-2017-02-09 14:05:04,245 INFO  com.weisi.Server.frame.utils.SwitchUtil - sendResult = true
-2017-02-09 14:05:04,245 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = true
-2017-02-09 14:05:04,245 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 该客户端已经存在——already exist cache, return true
-
-2017-02-09 14:05:14,244 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 1
-2017-02-09 14:05:14,244 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = , netMode = 1, netStrength = 2
-2017-02-09 14:05:14,245 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:23034
-2017-02-09 14:05:14,245 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:23027
-2017-02-09 14:05:14,245 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
-2017-02-09 14:05:14,245 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
-2017-02-09 14:05:14,245 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={0481deb6494848488048578316516694=com.weisi.Server.bean.SwitchCallbackPrxCache@5327fdae}
-2017-02-09 14:05:14,250 INFO  com.weisi.Server.frame.utils.SwitchUtil - ice tcp send end, sendResult = true
-
-2017-02-09 14:05:14,250 INFO  com.weisi.Server.frame.utils.SwitchUtil - sendResult = true
-2017-02-09 14:05:14,251 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = true
-2017-02-09 14:05:14,251 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 该客户端已经存在——already exist cache, return true
-
-2017-02-09 14:05:24,242 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 1
-2017-02-09 14:05:24,243 INFO  com.weisi.Server.service.switcher.impl.SwitchI - TCP心跳开始——参数——tcp heartbeat begin params sn = 0481deb6494848488048578316516694 id.name = SwitchClient, category = , netMode = 1, netStrength = 2
-2017-02-09 14:05:24,243 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器地址为——ipConn remote:192.168.5.1:23034
-2017-02-09 14:05:24,243 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 连接服务器断开为——ipConn local:192.168.5.1:23027
-2017-02-09 14:05:24,243 INFO  com.weisi.Server.service.switcher.impl.SwitchI - heartbeat
-2017-02-09 14:05:24,243 INFO  com.weisi.Server.frame.utils.SwitchUtil - 发送数据参数为---ice tcp send params sn = 0481deb6494848488048578316516694
-2017-02-09 14:05:24,243 INFO  com.weisi.Server.frame.utils.SwitchUtil - SwitchI.switchCallbackPrxCacheMap==={0481deb6494848488048578316516694=com.weisi.Server.bean.SwitchCallbackPrxCache@5327fdae}
-2017-02-09 14:05:24,245 INFO  com.weisi.Server.frame.utils.SwitchUtil - ice tcp send end, sendResult = true
-
-2017-02-09 14:05:24,245 INFO  com.weisi.Server.frame.utils.SwitchUtil - sendResult = true
-2017-02-09 14:05:24,245 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = true
-2017-02-09 14:05:24,245 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 该客户端已经存在——already exist cache, return true
+2017-02-15 10:58:08,603 INFO  com.weisi.Server.frame.utils.SwitchUtil - sendResult = true
+2017-02-15 10:58:08,604 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 客户端注册结束后  回调客户端 = true
+2017-02-15 10:58:08,604 INFO  com.weisi.Server.service.switcher.impl.SwitchI - 该客户端已经存在——already exist cache, return true
 
